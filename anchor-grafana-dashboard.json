@@ -1,67 +1,9 @@
 {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   "annotations": {
     "list": [
       {
         "builtIn": 1,
         "datasource": "-- Grafana --",
-
-
-
         "enable": true,
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
@@ -91,9 +33,6 @@
     },
     {
       "datasource": "Prometheus",
-
-
-
       "description": "Errors over last 5 hours",
       "fieldConfig": {
         "defaults": {
@@ -146,9 +85,6 @@
       "targets": [
         {
           "datasource": "Prometheus",
-
-
-
           "editorMode": "code",
           "expr": "increase(error_total{instance=~\"$anchor_instances\"}[5h])",
           "instant": false,
@@ -163,9 +99,6 @@
     },
     {
       "datasource": "Prometheus",
-
-
-
       "description": "Warns over last 5 hours",
       "fieldConfig": {
         "defaults": {
@@ -218,9 +151,6 @@
       "targets": [
         {
           "datasource": "Prometheus",
-
-
-
           "editorMode": "code",
           "expr": "increase(warn_total{instance=~\"$anchor_instances\"}[5h])",
           "instant": false,
@@ -235,9 +165,6 @@
     },
     {
       "datasource": "Prometheus",
-
-
-
       "description": "Warns over last 5 hours",
       "fieldConfig": {
         "defaults": {
@@ -290,9 +217,6 @@
       "targets": [
         {
           "datasource": "Prometheus",
-
-
-
           "editorMode": "code",
           "expr": "sum(increase(dep_error_total{instance=~\"$anchor_instances\"}[5h])) by (instance)",
           "instant": false,
@@ -307,9 +231,6 @@
     },
     {
       "datasource": "Prometheus",
-
-
-
       "description": "Warns over last 5 hours",
       "fieldConfig": {
         "defaults": {
@@ -361,9 +282,6 @@
       "targets": [
         {
           "datasource": "Prometheus",
-
-
-
           "editorMode": "code",
           "expr": "sum(increase(dep_warn_total{instance=~\"$anchor_instances\"}[5h])) by (instance)",
           "instant": false,
@@ -378,9 +296,6 @@
     },
     {
       "datasource": "Prometheus",
-
-
-
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -463,9 +378,6 @@
       "targets": [
         {
           "datasource": "Prometheus",
-
-
-
           "editorMode": "code",
           "exemplar": true,
           "expr": "libp2p_peers{instance=~\"$anchor_instances\"}",
@@ -483,9 +395,6 @@
     },
     {
       "datasource": "Prometheus",
-
-
-
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -568,9 +477,6 @@
       "targets": [
         {
           "datasource": "Prometheus",
-
-
-
           "editorMode": "code",
           "exemplar": false,
           "expr": "sum(rate(libp2p_bandwidth_bytes_total{instance=~\"$anchor_instances\",protocols=~\".*/p2p\", direction=\"Inbound\"}[$__rate_interval])) by (instance)",
@@ -582,9 +488,6 @@
         },
         {
           "datasource": "Prometheus",
-
-
-
           "editorMode": "code",
           "exemplar": false,
           "expr": "-sum(rate(libp2p_bandwidth_bytes_total{instance=~\"$anchor_instances\",protocols=~\".*/p2p\", direction=\"Outbound\"}[$__rate_interval])) by (instance)",
@@ -615,9 +518,6 @@
     },
     {
       "datasource": "Prometheus",
-
-
-
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -697,9 +597,6 @@
       "targets": [
         {
           "datasource": "Prometheus",
-
-
-
           "disableTextWrap": false,
           "editorMode": "code",
           "expr": "sum(rate(gossipsub_topic_msg_recv_counts_total{instance=~\"$anchor_instances\"}[1m])) by (instance)",
@@ -713,9 +610,6 @@
         },
         {
           "datasource": "Prometheus",
-
-
-
           "editorMode": "code",
           "expr": " sum(rate(gossipsub_topic_msg_sent_counts_total{instance=~\"$anchor_instances\"}[1m])) by (instance)",
           "hide": false,
@@ -732,9 +626,6 @@
     },
     {
       "datasource": "Prometheus",
-
-
-
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -814,9 +705,6 @@
       "targets": [
         {
           "datasource": "Prometheus",
-
-
-
           "editorMode": "code",
           "expr": "sum(rate(gossipsub_timedout_messages_dropped_per_topic_total{instance=~\"$anchor_instances\"}[1m]))",
           "hide": false,
@@ -827,9 +715,6 @@
         },
         {
           "datasource": "Prometheus",
-
-
-
           "editorMode": "code",
           "expr": "sum(rate(gossipsub_publish_messages_dropped_per_topic_total{instance=~\"$anchor_instances\"}[1m]))",
           "hide": false,
@@ -840,9 +725,6 @@
         },
         {
           "datasource": "Prometheus",
-
-
-
           "editorMode": "code",
           "expr": "sum(rate(gossipsub_forward_messages_dropped_per_topic_total{instance=~\"$anchor_instances\"}[1m]))",
           "hide": false,
@@ -858,9 +740,6 @@
     },
     {
       "datasource": "Prometheus",
-
-
-
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -911,9 +790,6 @@
       "targets": [
         {
           "datasource": "Prometheus",
-
-
-
           "editorMode": "code",
           "exemplar": true,
           "expr": "gossipsub_peers_per_protocol{instance=~\"$anchor_instances\"}",
@@ -945,9 +821,6 @@
     },
     {
       "datasource": "Prometheus",
-
-
-
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1027,9 +900,6 @@
       "targets": [
         {
           "datasource": "Prometheus",
-
-
-
           "editorMode": "code",
           "expr": "sum(rate(gossipsub_timedout_messages_dropped_per_topic_total{instance=~\"$anchor_instances\"}[1m])) by (instance)",
           "instant": false,
@@ -1058,9 +928,6 @@
     },
     {
       "datasource": "Prometheus",
-
-
-
       "fieldConfig": {
         "defaults": {
           "custom": {
@@ -1122,9 +989,6 @@
       "targets": [
         {
           "datasource": "Prometheus",
-
-
-
           "editorMode": "code",
           "expr": "sum(increase(gossipsub_queue_size_bucket{instance=~\"$anchor_instances\", message_type=~\"Priority\"}[$__rate_interval])) by (le)",
           "format": "heatmap",
@@ -1140,9 +1004,6 @@
     },
     {
       "datasource": "Prometheus",
-
-
-
       "fieldConfig": {
         "defaults": {
           "custom": {
@@ -1204,9 +1065,6 @@
       "targets": [
         {
           "datasource": "Prometheus",
-
-
-
           "editorMode": "code",
           "expr": "sum(increase(gossipsub_queue_size_bucket{instance=~\"$anchor_instances\", message_type=~\"NonPriority\"}[$__rate_interval])) by (le)",
           "format": "heatmap",
@@ -1222,9 +1080,6 @@
     },
     {
       "datasource": "Prometheus",
-
-
-
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -1302,9 +1157,6 @@
       "targets": [
         {
           "datasource": "Prometheus",
-
-
-
           "editorMode": "code",
           "exemplar": false,
           "expr": "sum(increase(gossipsub_removed_queued_messages_total{instance=~\"$anchor_instances\"}[1h]))",
@@ -1323,9 +1175,6 @@
     },
     {
       "datasource": "Prometheus",
-
-
-
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1405,9 +1254,6 @@
       "targets": [
         {
           "datasource": "Prometheus",
-
-
-
           "editorMode": "code",
           "expr": "histogram_quantile(0.95, rate(gossipsub_heartbeat_duration_bucket {instance=~\"$anchor_instances\"}[1m]))",
           "hide": true,
@@ -1418,9 +1264,6 @@
         },
         {
           "datasource": "Prometheus",
-
-
-
           "editorMode": "code",
           "expr": "histogram_quantile(0.99, rate(gossipsub_heartbeat_duration_bucket {instance=~\"$anchor_instances\"}[1m]))",
           "hide": false,
@@ -1437,9 +1280,6 @@
     },
     {
       "datasource": "Prometheus",
-
-
-
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1521,9 +1361,6 @@
       "targets": [
         {
           "datasource": "Prometheus",
-
-
-
           "editorMode": "code",
           "exemplar": true,
           "expr": "rate(gossipsub_topic_msg_recv_counts_unfiltered_total{instance=~\"$anchor_instances\"}[$__rate_interval])*12 - rate(gossipsub_topic_msg_recv_counts_total{instance=~\"$anchor_instances\"}[$__rate_interval])*12",
@@ -1562,9 +1399,6 @@
     },
     {
       "datasource": "Prometheus",
-
-
-
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1644,9 +1478,6 @@
       "targets": [
         {
           "datasource": "Prometheus",
-
-
-
           "disableTextWrap": false,
           "editorMode": "code",
           "expr": "gossipsub_topic_peers_counts{instance=~\"$anchor_instances\"}",
@@ -1665,9 +1496,6 @@
     },
     {
       "datasource": "Prometheus",
-
-
-
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -1750,9 +1578,6 @@
       "targets": [
         {
           "datasource": "Prometheus",
-
-
-
           "editorMode": "code",
           "exemplar": true,
           "expr": "rate(gossipsub_idontwant_msgs_total{instance=~\"$anchor_instances\"}[$__rate_interval])",
@@ -1770,9 +1595,6 @@
     },
     {
       "datasource": "Prometheus",
-
-
-
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -1855,9 +1677,6 @@
       "targets": [
         {
           "datasource": "Prometheus",
-
-
-
           "editorMode": "code",
           "exemplar": true,
           "expr": "rate(gossipsub_idontwant_msgs_ids_total{instance=~\"$anchor_instances\"}[$__rate_interval])",
@@ -1888,9 +1707,6 @@
     },
     {
       "datasource": "Prometheus",
-
-
-
       "description": "What is our average score in the mesh?",
       "fieldConfig": {
         "defaults": {
@@ -1971,9 +1787,6 @@
       "targets": [
         {
           "datasource": "Prometheus",
-
-
-
           "editorMode": "code",
           "expr": "rate(gossipsub_score_per_mesh_sum{instance=~\"$anchor_instances\"}[10m]) / rate(gossipsub_score_per_mesh_count{instance=~\"$anchor_instances\"}[10m])",
           "instant": false,
@@ -1988,9 +1801,6 @@
     },
     {
       "datasource": "Prometheus",
-
-
-
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -2073,9 +1883,6 @@
       "targets": [
         {
           "datasource": "Prometheus",
-
-
-
           "editorMode": "code",
           "exemplar": true,
           "expr": "rate(gossipsub_scoring_penalties_total{instance=~\"$anchor_instances\"}[$__rate_interval])*12",
@@ -2091,9 +1898,6 @@
     },
     {
       "datasource": "Prometheus",
-
-
-
       "description": "Threshold (red colour) at bellow 4.5 peers",
       "fieldConfig": {
         "defaults": {
@@ -2174,9 +1978,6 @@
       "targets": [
         {
           "datasource": "Prometheus",
-
-
-
           "editorMode": "code",
           "expr": "gossipsub_mesh_peer_counts{instance=~\"$anchor_instances\"}",
           "instant": false,
@@ -2191,9 +1992,6 @@
     },
     {
       "datasource": "Prometheus",
-
-
-
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -2271,9 +2069,6 @@
       "targets": [
         {
           "datasource": "Prometheus",
-
-
-
           "editorMode": "code",
           "expr": "count by(instance) (gossipsub_topic_subscription_status{instance=~\"$anchor_instances\"} == 1)",
           "legendFormat": "__auto",
@@ -2300,9 +2095,6 @@
     },
     {
       "datasource": "Prometheus",
-
-
-
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -2382,9 +2174,6 @@
       "targets": [
         {
           "datasource": "Prometheus",
-
-
-
           "editorMode": "code",
           "exemplar": false,
           "expr": "sum(rate(gossipsub_accepted_messages_per_topic_total{instance=~\"$anchor_instances\"}[1m])) by (instance)",
@@ -2396,9 +2185,6 @@
         },
         {
           "datasource": "Prometheus",
-
-
-
           "editorMode": "code",
           "expr": "sum(rate(gossipsub_rejected_messages_per_topic_total{instance=~\"$anchor_instances\"}[1m])) by (instance)",
           "format": "time_series",
@@ -2410,9 +2196,6 @@
         },
         {
           "datasource": "Prometheus",
-
-
-
           "editorMode": "code",
           "expr": "sum(rate(gossipsub_ignored_messages_per_topic_total{instance=~\"$anchor_instances\"}[1m])) by (instance)",
           "hide": false,
@@ -2428,9 +2211,6 @@
     },
     {
       "datasource": "Prometheus",
-
-
-
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -2513,9 +2293,6 @@
       "targets": [
         {
           "datasource": "Prometheus",
-
-
-
           "editorMode": "code",
           "exemplar": true,
           "expr": "increase(gossipsub_topic_iwant_msgs_total{instance=~\"$anchor_instances\"}[$__rate_interval])",
@@ -2582,9 +2359,6 @@
     },
     {
       "datasource": "Prometheus",
-
-
-
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -2668,9 +2442,6 @@
       "targets": [
         {
           "datasource": "Prometheus",
-
-
-
           "editorMode": "code",
           "exemplar": true,
           "expr": "increase(gossipsub_topic_msg_recv_counts_total{instance=~\"$anchor_instances\"}[$__rate_interval])",
@@ -2702,9 +2473,6 @@
     },
     {
       "datasource": "Prometheus",
-
-
-
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -2758,9 +2526,6 @@
       "targets": [
         {
           "datasource": "Prometheus",
-
-
-
           "editorMode": "code",
           "exemplar": true,
           "expr": "rate(gossipsub_ignored_messages_per_topic_total{instance=~\"$anchor_instances\"}[$__rate_interval])",
@@ -2799,9 +2564,6 @@
     },
     {
       "datasource": "Prometheus",
-
-
-
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -2885,9 +2647,6 @@
       "targets": [
         {
           "datasource": "Prometheus",
-
-
-
           "editorMode": "code",
           "exemplar": true,
           "expr": "rate(gossipsub_topic_msg_recv_bytes_total{instance=~\"$anchor_instances\"}[$__rate_interval])",
@@ -2919,9 +2678,6 @@
     },
     {
       "datasource": "Prometheus",
-
-
-
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -3005,9 +2761,6 @@
       "targets": [
         {
           "datasource": "Prometheus",
-
-
-
           "editorMode": "code",
           "exemplar": true,
           "expr": "rate(gossipsub_topic_msg_sent_bytes_total{instance=~\"$anchor_instances\"}[$__rate_interval])",
@@ -3039,9 +2792,6 @@
     },
     {
       "datasource": "Prometheus",
-
-
-
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -3124,9 +2874,6 @@
       "targets": [
         {
           "datasource": "Prometheus",
-
-
-
           "disableTextWrap": false,
           "editorMode": "code",
           "exemplar": true,
