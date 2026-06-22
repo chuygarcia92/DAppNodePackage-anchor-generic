@@ -2,12 +2,12 @@
   "upstream": [
     {
       "repo": "sigp/anchor",
-      "version": "v1.2.3",
+      "version": "v1.2.4",
       "arg": "UPSTREAM_VERSION"
     },
     {
       "repo": "ssvlabs/ssv-dkg",
-      "version": "v3.0.3",
+      "version": "v3.1.0",
       "arg": "DKG_UPSTREAM_VERSION"
     },
     {
